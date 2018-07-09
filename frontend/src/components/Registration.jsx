@@ -1,63 +1,65 @@
 import React, { Component } from 'react';
 import AccountFields from './AccountFields';
-import RequirementsFields from './RequirementsFields';
+import ReqFields from './ReqFields';
+import Confirmation from './Confirmation';
 import { ProgressBar } from 'react-bootstrap';
 
-var fieldValues = {
-    name     : null,
-    email    : null,
-    password : null,
-    age      : null,
-    inst     : [],
-}
-
-
 class Registration extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { 
-            step : 1,
-         };
+  constructor(props) {
+      super(props);
+      this.state = { 
+          step : 1,
+        };
 
-         this.nextStep = this.nextStep.bind(this);
+      this.nextStep = this.nextStep.bind(this);
+      this.handleChange = this.handleChange.bind(this);
+      this.sendToBackend = this.sendToBackend.bind(this);
+  
+  }
+    
+    handleChange(event) {
+      const target = event.target;
+      const value = target.value;
+      const name = target.name;
+      this.setState({[name]: value})
+    }
+
+    nextStep() {
+      this.setState((prevState, props) => ({
+        step: prevState.step + 1
+      }));
     }
     
-    saveValues(fields) {
-        return function() { 
-          fieldValues = Object.assign({}, fieldValues, fields)
-        }()
-    }
-      
-    nextStep() {
-      this.setState({
-        step : this.state.step + 1
-      })
-    }
-      
-      // Same as nextStep, but decrementing
     previousStep() {
         this.setState({
           step : this.state.step - 1
         })
     }
 
+    sendToBackend() {
+      alert('Backend not yet implemented.');
+    }
+
+
     showStep() {
     switch (this.state.step) {
         case 1:
-        return <AccountFields
-                                nextStep={this.nextStep}
-                                saveValues={this.saveValues} />
+        return <AccountFields   handleChange={this.handleChange}
+                                nextStep={this.nextStep}/>
         case 2:
-        return <AccountFields   
-                                nextStep={this.nextStep}
-                                saveValues={this.saveValues} />
+        return <ReqFields       handleChange={this.handleChange}                        
+                                nextStep={this.nextStep}/>
+        case 3:
+        return <Confirmation    userData={this.state.userData}
+                                sendToBackend={this.sendToBackend}/>
+        break;
         default:
         // nothing
     }
   }
 
   render() {
-    var style = (this.state.step / 4 * 100) ;
+    var style = (this.state.step / 3 * 100) ;
     return (
         <main>
           <span className="progress-step">Step {this.state.step}</span>
@@ -66,7 +68,6 @@ class Registration extends Component {
         </main>
       )
     } 
-
 };
 
 export default Registration
