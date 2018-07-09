@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-
 import LoginControl from './components/LoginControl'
 
 class App extends Component {
@@ -14,13 +13,11 @@ class App extends Component {
           <h1 className="App-title">Tom Francombe Music</h1>
           <title>Tom Francombe Music</title>
         </header>
-        <p className="App-intro">
-        <div class="container">
+        <div className="container">
           <div id ="login-control"></div>
             <LoginControl />
-          <div id="registration-form"></div>
         </div>
-        </p>
+    
       </div>
     );
   }

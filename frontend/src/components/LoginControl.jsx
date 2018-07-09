@@ -1,27 +1,28 @@
 import React, { Component } from 'react';
 import Registration from './Registration';
+import { Alert, Button } from 'react-bootstrap'
 
 function LoginButton(props) {
     return (
-      <button onClick={props.onClick}>
+      <Button onClick={props.onClick}>
         Login
-      </button>
+      </Button>
     );
   }
   
   function LogoutButton(props) {
     return (
-      <button onClick={props.onClick}>
+      <Button onClick={props.onClick}>
         Logout
-      </button>
+      </Button>
     );
   }
 
   function RegisterButton(props) {
     return (
-      <button onClick={props.onClick}>
+      <Button onClick={props.onClick}>
         Register
-      </button>
+      </Button>
     );
   }
 
@@ -34,11 +35,18 @@ function Greeting(props) {
   }
 
   function UserGreeting(props) {
-    return <h1>Welcome back!</h1>;
+    return (
+    <Alert bsStyle="warning">
+    <strong>Welcome back!</strong> Good to see you.
+    </Alert>);
+    
   }
   
   function GuestGreeting(props) {
-    return <h1>Please sign up.</h1>;
+    return (
+      <Alert bsStyle="warning">
+      <strong>Please sign up</strong> or login.
+      </Alert>);
   }
 
   class LoginControl extends Component {

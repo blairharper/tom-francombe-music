@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
 
-class AccountFields extends Component {
+class RequirementsFields extends Component {
 
   handleChange(event) {
     const target = event.target;
@@ -14,9 +14,8 @@ class AccountFields extends Component {
   handleSubmit() {
     // Get values via this.refs
     var data = {
-      name     : this.state.name,
-      password : this.state.password,
-      email    : this.state.email
+      inst     : this.state.inst,
+      age : this.state.age
     }
     this.props.saveValues(data);
     this.props.nextStep();
@@ -26,25 +25,20 @@ class AccountFields extends Component {
       
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+
     return ( <div>
-      <label>Name</label> 
+      <label>Instrument</label> 
       <input type="text"
-             name="name"
+             name="inst"
              onChange={this.handleChange} />
 
-      <label>Password</label>
-      <input type="password"
-             name="password"
-             onChange={this.handleChange} />
-
-      <label>Email</label>
-      <input type="email"
-             name="email"
+      <label>Age</label>
+      <input type="text"
+             name="age"
              onChange={this.handleChange} />
 
       <Button style={{marginTop: 10 + 'px'}} onClick={ this.handleSubmit }>Next</Button></div>
     )
   };
 }
-
-export default AccountFields
+export default RequirementsFields
