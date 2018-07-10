@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import LoginControl from './components/logincontrol/LoginControl'
-import Navigation from './components/navbar/Navigation'
+import LoginControl from './components/logincontrol/LoginControl';
+import Navigation from './components/navbar/Navigation';
+import MainCarousel from './components/carousel/MainCarousel';
 
 class App extends Component {
   render() {
@@ -13,7 +14,11 @@ class App extends Component {
           <title>Tom Francombe Music</title>
          
         </header>
+        
         <Navigation />
+        <div className="carousel-container">
+          <MainCarousel />
+        </div>
       </div>
     );
   }
