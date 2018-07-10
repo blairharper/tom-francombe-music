@@ -7,17 +7,15 @@ class Confirmation extends Component {
   render() {
     
     return (<div> 
-        {/* <ListGroup>
+        <ListGroup>
             <ListGroupItem header="Name:">{this.props.state.name}</ListGroupItem>
-            <ListGroupItem header="Heading 2" href="#">
-                Linked item
-            </ListGroupItem>
-            <ListGroupItem header="Heading 3" bsStyle="danger">
-                Danger styling
-            </ListGroupItem>
-            </ListGroup> */}
+            <ListGroupItem header="E-Mail:">{this.props.state.email}</ListGroupItem>
+            <ListGroupItem header="Instrument:">{this.props.state.inst}</ListGroupItem>
+            <ListGroupItem header="Skill level:">{this.props.state.skill}</ListGroupItem>
+            <ListGroupItem header="Age:">{this.props.state.age}</ListGroupItem>
+        </ListGroup>
       
-        <Button style={{marginTop: 10 + 'px'}} onClick={ this.props.nextStep }>Register</Button></div>
+        <Button style={{marginTop: 10 + 'px'}} onClick={ this.props.sendToBackend }>Register</Button></div>
     )
   }
 }

@@ -50,9 +50,8 @@ class Registration extends Component {
         return <ReqFields       handleChange={this.handleChange}                        
                                 nextStep={this.nextStep}/>
         case 3:
-        return <Confirmation    userData={this.state.userData}
+        return <Confirmation    state={this.state}
                                 sendToBackend={this.sendToBackend}/>
-        break;
         default:
         // nothing
     }
