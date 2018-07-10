@@ -1,3 +1,22 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 180px; /* Margin bottom by footer height */
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 180px; /* Set the fixed height of the footer here */
+  background-color: lightgray;
+}
+
+.show-grid {
+  width: 100%;
+}
+
 .App-header {
   background-color: white;
   height: 20%;
@@ -26,20 +45,59 @@
 
 
 .carousel-inner > .item > img {
-  /* max-height: 550px;
-  width: 100%;
-  line-height: 1;
-  margin:auto;
-  overflow: hidden; */
   display: block;
-
   max-height: 500px;
-  
   margin: auto;
 }
 
-.tooltip-inner {
-  background-color: lightgrey;
-  color: black;
+.carousel-control.right {
+  background-image: none;
 }
 
+.carousel-control.left {
+  background-image: none;
+}
+
+.tooltip-inner {
+  background-color: darkgray;
+  color: white;
+  font-weight: 800;
+}
+
+div#body-container {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.address span , .music span , .social span{
+  color: teal;
+  font-weight: 800; 
+  padding:18px;
+  display: block;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 4px;
+}
+
+.address li , .music li , .social li {
+   padding:3px 0px;
+   list-style: none;
+}
+
+.address li p , .music li a , .social li a{
+   color: teal;
+   letter-spacing: 2px;
+   text-decoration:none;
+   font-size:14px;
+}
+
+.social li{
+ float: left;
+ padding-left: 25px;
+}
+
+.social .fa{
+  color: teal;
+  margin-right: 10px;
+  font-size:28px;
+}
