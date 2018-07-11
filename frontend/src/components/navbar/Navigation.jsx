@@ -7,6 +7,7 @@ var navItems = {
     second   : "Events",
     third  : "Contact",
     fourth   : "Blog",
+    logincontrol : '',
 }
 
 function HomeNav(props) {
@@ -54,6 +55,30 @@ function FourthNav(props) {
     );
 }
 
+function LoginButton(props) {
+    return (
+      <NavItem onClick={props.onClick}>
+      Login
+      </NavItem>
+    );
+  }
+  
+  function LogoutButton(props) {
+    return (
+      <NavItem onClick={props.onClick}>
+      Logout
+      </NavItem>
+    );
+  }
+
+  function RegisterButton(props) {
+    return (
+      <NavItem onClick={props.onClick}>
+      Sign up
+      </NavItem>
+    );
+  }
+
 class Navigation extends Component {
     constructor(props) {
         super(props);
@@ -62,12 +87,14 @@ class Navigation extends Component {
         this.handleSecondNavClick = this.handleSecondNavClick.bind(this);
         this.handleThirdNavClick = this.handleThirdNavClick.bind(this);
         this.handleFourthNavClick = this.handleFourthNavClick.bind(this);
-
+        this.handleLoginClick = this.handleLoginClick.bind(this);
+        this.handleLogoutClick = this.handleLogoutClick.bind(this);
+        this.handleRegisterClick = this.handleRegisterClick.bind(this);
         this.state = {
                         currentPage : 'home',
+                        isLoggedIn  : false,
                      };
       }
-
     handleHomeNavClick() {
         this.setState({currentPage : 'home'});
     }
@@ -92,6 +119,37 @@ class Navigation extends Component {
 
     }
 
+    handleLoginClick() {
+        this.setState({isLoggedIn: true, currentPage: 'Login'});
+    }
+    
+    handleLogoutClick() {
+        this.setState({isLoggedIn: false, currentPage: 'home'});
+    }
+
+    handleRegisterClick() { 
+        this.setState({currentPage: 'Registration'});
+    }
+
+    loginControl() {
+        const isLoggedIn = this.state.isLoggedIn;
+        let NavLogin;
+        if (isLoggedIn) {
+            NavLogin = <LogoutButton onClick={this.handleLogoutClick} />
+        } else {
+            NavLogin = <LoginButton onClick={this.handleLoginClick} />
+        }
+        return NavLogin;
+    }
+
+    registerControl() {
+        const isLoggedIn = this.state.isLoggedIn;
+        let NavRegister
+        if (!isLoggedIn) {
+            return NavRegister = <RegisterButton onClick={this.handleRegisterClick} />
+        }
+    }
+
   render() {
     return (<div> 
                 <div className="react-nav">
@@ -106,6 +164,8 @@ class Navigation extends Component {
                             <SecondNav onClick = {this.handleSecondNavClick} />
                             <ThirdNav onClick = {this.handleThirdNavClick} />
                             <FourthNav onClick = {this.handleFourthNavClick} />
+                            {this.loginControl()}
+                            {this.registerControl()}
                         </Nav>
                     </Navbar.Collapse>
                     </Navbar>

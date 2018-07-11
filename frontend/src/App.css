@@ -234,18 +234,6 @@ html {
 body {
   margin-bottom: 180px; /* Margin bottom by footer height */
 }
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 180px; /* Set the fixed height of the footer here */
-  background-color: lightgray;
-  text-align: center;
-}
-
-footer .show-grid {
-  margin-left: -30px;
-}
 
 .show-grid {
   width: 100%;
@@ -261,7 +249,10 @@ footer .show-grid {
 .App-title {
   font-size: 1.5em;
   text-align: center;
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
 }
+
+/* ||||||||||||||| NAVBAR |||||||||||||||||| */
 .navbar-header, .navbar-inverse {
   background-color: lightgray;
   border-color: lightgray;
@@ -277,7 +268,14 @@ footer .show-grid {
   vertical-align: top;
 }
 
+.tooltip-inner {
+  background-color: darkgray;
+  color: white;
+  font-weight: 800;
+}
+/* ||||||||||||||| END NAVBAR |||||||||||||||||| */
 
+/* ||||||||||||||| CAROUSEL |||||||||||||||||| */
 .carousel-inner > .item > img {
   display: block;
   max-height: 500px;
@@ -292,15 +290,37 @@ footer .show-grid {
   background-image: none;
 }
 
-.tooltip-inner {
-  background-color: darkgray;
-  color: white;
-  font-weight: 800;
-}
+/* ||||||||||||||| END CAROUSEL |||||||||||||||||| */
 
+/* ||||||||||||||| HOME CONTENT |||||||||||||||||| */
 body .home-content-container {
   padding-top: 10px;
   text-align: center;
+}
+/* |||||||||||||||  END HOME CONTENT |||||||||||||||||| */
+
+/* ||||||||||||||| REGISTRATION |||||||||||||||||| */
+
+body .registration-content-container {
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+
+/* ||||||||||||||| END REGISTRATION |||||||||||||||||| */
+
+/* ||||||||||||||| FOOTER |||||||||||||||||| */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 180px; /* Set the fixed height of the footer here */
+  background-color: lightgray;
+  text-align: center;
+}
+
+footer .show-grid {
+  margin-left: -30px;
 }
 
 .address span , .music span , .social span{
@@ -336,3 +356,4 @@ body .home-content-container {
   margin-right: 5px;
   font-size:28px;
 }
+/* ||||||||||||||| END FOOTER |||||||||||||||||| */

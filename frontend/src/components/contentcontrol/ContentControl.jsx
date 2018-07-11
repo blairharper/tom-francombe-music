@@ -5,6 +5,9 @@ import TutoringContent from './TutoringContent';
 import EventsContent from './EventsContent';
 import ContactContent from './ContactContent';
 import BlogContent from './BlogContent';
+import RegistrationContent from './registration/RegistrationContent';
+import LoginContent from './LoginContent';
+
 
 class ContentControl extends Component {
     showPage() {
@@ -19,6 +22,11 @@ class ContentControl extends Component {
                 return <ContactContent />;
             case "FourthNav":
                 return <BlogContent />;
+            case "Registration":
+               return <RegistrationContent />;
+            case "Login":
+                return <LoginContent />;
+            
         }
     }
 
