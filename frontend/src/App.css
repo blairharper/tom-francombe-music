@@ -1,3 +1,222 @@
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+  
+  .in tooltip bottom {
+    visibility: hidden;
+  }
+  .tooltip-inner {
+    visibility: hidden;
+  }
+
+  .tooltip-arrow {
+    visibility: hidden;
+  }
+  .navbar-header, .navbar-inverse {
+    background-color: white;
+    border-color: white;
+  
+  }
+  div#body-container {
+    font-size: 10px;
+    margin-left: 5%;
+  }
+
+  body .carousel-inner > .item > img {
+    display: block;
+    max-height: 207px;
+    margin: auto;
+  }
+  
+
+ body .address span , body .music span , body .social span{
+    color: teal;
+    font-weight: 800; 
+    padding:7px;
+    display: block;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 2px;
+    padding-left: 0px;
+    margin-left: -27px;
+  }
+  
+
+  body .address li  {
+     padding:3px 0px;
+     list-style: none;
+     margin-left: -35px;
+  }
+
+  body .music li {
+    margin-left: -35.6px;
+  }
+  
+  body .address li p , body .music li a , body .social li a{
+     color: teal;
+     letter-spacing: 1px;
+     text-decoration:none;
+     font-size:10px;
+     
+  }
+
+  body .footer {
+    position: absolute;
+    bottom: 0;
+    margin-left: -5%;
+    width: 100%;
+    height: 170px; /* Set the fixed height of the footer here */
+    background-color: lightgray;
+    
+  }
+  
+  body .social li{
+   padding-left: 0px;
+   margin-left: -8.5px;
+  }
+  
+  body .social .fa{
+    color: teal;
+    font-size: 13px;
+  }
+  
+
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+}
+
+
 html {
   position: relative;
   min-height: 100%;
@@ -11,6 +230,10 @@ body {
   width: 100%;
   height: 180px; /* Set the fixed height of the footer here */
   background-color: lightgray;
+}
+
+footer .show-grid {
+  margin-left: -30px;
 }
 
 .show-grid {
@@ -28,7 +251,11 @@ body {
   font-size: 1.5em;
   text-align: center;
 }
+.navbar-header, .navbar-inverse {
+  background-color: lightgray;
+  border-color: lightgray;
 
+}
 .react-nav {
   text-align: center;
 }
@@ -37,10 +264,6 @@ body {
   display: inline-block;
   float: none;
   vertical-align: top;
-}
-
-.navbar .navbar-collapse {
-  text-align: center;
 }
 
 

@@ -19,14 +19,14 @@ class MainCarousel extends Component {
             <img  alt="900x500" src={image3} />
             <Carousel.Caption>
             <h3>Attentive</h3>
-            <p>Friendly but professional approach to teaching and tutoring</p>
+            <p>Friendly and professional approach to teaching and tutoring</p>
             </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
             <img  alt="900x500" src={image1} />
             <Carousel.Caption>
             <h3>Brass specialist</h3>
-            <p>Specialise in brass instruments but also glad to offer tutoring over a wide range of instruments and across all levels.</p>
+            <p>Also offer tutoring over a wide range of instruments and across all levels</p>
             </Carousel.Caption>
         </Carousel.Item>
         </Carousel>
