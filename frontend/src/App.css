@@ -163,7 +163,12 @@
     padding-left: 0px;
     margin-left: -27px;
   }
-  
+  body .music span {
+    padding-left: 21px;
+  }
+  body .social span {
+  padding-left: 21px;
+  }
 
   body .address li  {
      padding:3px 0px;
@@ -172,7 +177,7 @@
   }
 
   body .music li {
-    margin-left: -35.6px;
+    margin-left: -16px;
   }
   
   body .address li p , body .music li a , body .social li a{
@@ -194,8 +199,8 @@
   }
   
   body .social li{
-   padding-left: 0px;
-   margin-left: -8.5px;
+   padding-left: 15px;
+   margin-left: -4.5px;
   }
   
   body .social .fa{
@@ -317,10 +322,11 @@ div#body-container {
 .social li{
  float: left;
  padding-left: 25px;
+ margin-left: 13px;
 }
 
 .social .fa{
   color: teal;
-  margin-right: 10px;
+  margin-right: 5px;
   font-size:28px;
 }

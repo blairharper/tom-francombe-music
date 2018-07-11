@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col, Popover } from 'react-bootstrap';
+import { Grid, Row, Col } from 'react-bootstrap';
 
 class HomeBody extends Component {
     render() {
@@ -56,24 +56,21 @@ class HomeBody extends Component {
                     <ul className="social">
                         <span>Social</span>
                         <li>
-                            <a href="#"><i className="fa fa-facebook fa-2x"></i></a>
+                            <a href="https://www.facebook.com/thomas.francombe.7"><i className="fa fa-facebook fa-2x"></i></a>
                         </li>
                         
                         <li>
-                            <a href="#"><i className="fa fa-twitter fa-2x"></i></a>
+                            <a href="https://twitter.com/tomfrancombe"><i className="fa fa-twitter fa-2x"></i></a>
                         </li>
                         
                         <li>
-                            <a href="#"><i className="fa fa-linkedin fa-2x"></i></a>
+                            <a href="https://uk.linkedin.com/in/tom-francombe-04552399"><i className="fa fa-linkedin fa-2x"></i></a>
                         </li>
                         
                         <li>
-                            <a href="#"><i className="fa fa-instagram fa-2x"></i></a>
+                            <a href="https://www.instagram.com/tfrancombemusic/"><i className="fa fa-instagram fa-2x"></i></a>
                         </li>
                         
-                        <li>
-                            <a href="#"><i className="fa fa-google-plus fa-2x"></i></a>
-                        </li> 
                     </ul>
                     </Col>
                 </Row>
